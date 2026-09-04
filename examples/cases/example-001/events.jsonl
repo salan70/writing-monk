@@ -1,0 +1,5 @@
+{"id":"e001","type":"request","actor":"human","created_at":"2026-09-04T12:00:00Z","content":"Explain what a language server does."}
+{"id":"e002","type":"generation","actor":"ai","created_at":"2026-09-04T12:00:05Z","artifact":"artifacts/draft-001.md","parent":"e001"}
+{"id":"e003","type":"feedback","actor":"human","created_at":"2026-09-04T12:01:00Z","content":"The opening is too promotional. State the mechanism directly.","parent":"e002"}
+{"id":"e004","type":"revision","actor":"ai","created_at":"2026-09-04T12:01:10Z","artifact":"artifacts/revision-001.md","parent":"e003"}
+{"id":"e005","type":"accept","actor":"human","created_at":"2026-09-04T12:02:00Z","parent":"e004"}
