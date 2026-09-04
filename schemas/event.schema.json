@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://writing-monk.local/schemas/event.schema.json",
+  "title": "WritingMonkEvent",
+  "type": "object",
+  "required": ["id", "type", "actor", "created_at"],
+  "properties": {
+    "id": {"type": "string", "minLength": 1},
+    "type": {"enum": ["request", "generation", "feedback", "revision", "human_edit", "accept", "reject", "analysis"]},
+    "actor": {"enum": ["human", "ai", "system"]},
+    "created_at": {"type": "string", "format": "date-time"},
+    "content": {"type": "string"},
+    "artifact": {"type": "string"},
+    "parent": {"type": "string"},
+    "target": {
+      "type": "object",
+      "properties": {
+        "event": {"type": "string"},
+        "artifact": {"type": "string"},
+        "section": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "metadata": {"type": "object", "additionalProperties": true}
+  },
+  "additionalProperties": false,
+  "allOf": [{
+    "if": {"properties": {"type": {"enum": ["generation", "revision", "human_edit"]}}},
+    "then": {"required": ["artifact"]}
+  }]
+}
