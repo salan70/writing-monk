@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://writing-monk.local/schemas/observation.schema.json",
+  "title": "WritingMonkObservation",
+  "type": "object",
+  "required": ["id", "case", "description", "evidence"],
+  "properties": {
+    "id": {"type": "string", "minLength": 1},
+    "case": {"type": "string", "minLength": 1},
+    "type": {"type": "string"},
+    "description": {"type": "string", "minLength": 1},
+    "evidence": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["event"],
+        "properties": {
+          "event": {"type": "string"},
+          "artifact": {"type": "string"},
+          "note": {"type": "string"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "source_agent": {"type": "string"}
+  },
+  "additionalProperties": false
+}
