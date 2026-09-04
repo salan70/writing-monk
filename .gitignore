@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.DS_Store
+.env
+.env.*
+
+# Personal writing data and derived profile data.
+workspace/
+
+# Local caches
+.cache/
+coverage/
