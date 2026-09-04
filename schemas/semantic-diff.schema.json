@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://writing-monk.local/schemas/semantic-diff.schema.json",
+  "title": "WritingMonkSemanticDiff",
+  "type": "object",
+  "required": ["from", "to", "changes"],
+  "properties": {
+    "from": {"type": "string"},
+    "to": {"type": "string"},
+    "changes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["type", "category", "interpretation"],
+        "properties": {
+          "type": {"enum": ["insertion", "deletion", "replacement", "restructure"]},
+          "category": {"type": "string"},
+          "before": {"type": "string"},
+          "after": {"type": "string"},
+          "interpretation": {"type": "string"},
+          "confidence": {"type": "number", "minimum": 0, "maximum": 1}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
