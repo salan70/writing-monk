@@ -1,0 +1,14 @@
+{
+  "from": "artifacts/draft-001.md",
+  "to": "artifacts/revision-001.md",
+  "changes": [
+    {
+      "type": "deletion",
+      "category": "rhetorical_emphasis",
+      "before": "Language servers are an incredibly powerful technology that dramatically improves the developer experience.",
+      "after": "",
+      "interpretation": "Promotional framing was removed so the explanation starts with the mechanism.",
+      "confidence": 0.98
+    }
+  ]
+}
