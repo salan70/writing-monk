@@ -1,0 +1,11 @@
+observations:
+  - id: O-EXAMPLE-001
+    case: example-001
+    type: deletion
+    description: Promotional framing was removed from the opening and the explanation was changed to begin directly with the mechanism.
+    evidence:
+      - event: e003
+        artifact: artifacts/draft-001.md
+        note: The human explicitly requested removal of promotional framing.
+      - event: e004
+        artifact: artifacts/revision-001.md
