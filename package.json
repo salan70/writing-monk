@@ -1,0 +1,23 @@
+{
+  "name": "writing-monk",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Repository-first personalization framework for AI-assisted writing.",
+  "packageManager": "pnpm@10.15.1",
+  "scripts": {
+    "monk": "tsx src/cli.ts",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "yaml": "^2.8.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2"
+  }
+}
