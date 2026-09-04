@@ -1,0 +1,18 @@
+contexts:
+  - id: global
+    description: Preferences that apply across writing tasks.
+
+  - id: technical-writing
+    description: Technical explanations, architecture notes, and implementation-oriented prose.
+
+  - id: teaching
+    description: Educational material, lectures, worksheets, and explanations for learners.
+
+  - id: presentation
+    description: Presentation scripts, talks, and slide-adjacent writing.
+
+  - id: github
+    description: Issues, pull requests, release notes, and repository documentation.
+
+  - id: casual-message
+    description: Direct messages and informal communication.
