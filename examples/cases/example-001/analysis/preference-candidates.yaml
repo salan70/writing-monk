@@ -1,0 +1,11 @@
+preferences:
+  - id: PC-EXAMPLE-001
+    statement: Prefer direct mechanism-first openings over promotional framing in technical explanations.
+    status: hypothesis
+    confidence: 0.55
+    scope:
+      - technical-writing
+    positive_evidence:
+      - case: example-001
+        observation: O-EXAMPLE-001
+    counter_evidence: []
