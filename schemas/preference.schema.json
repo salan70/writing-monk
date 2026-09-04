@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://writing-monk.local/schemas/preference.schema.json",
+  "title": "WritingMonkPreference",
+  "type": "object",
+  "required": ["id", "statement", "status", "confidence", "scope", "positive_evidence"],
+  "properties": {
+    "id": {"type": "string", "minLength": 1},
+    "statement": {"type": "string", "minLength": 1},
+    "status": {"enum": ["candidate", "hypothesis", "accepted", "deprecated"]},
+    "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+    "scope": {"type": "array", "minItems": 1, "items": {"type": "string"}, "uniqueItems": true},
+    "positive_evidence": {"type": "array", "items": {"$ref": "#/$defs/evidenceRef"}},
+    "counter_evidence": {"type": "array", "items": {"$ref": "#/$defs/evidenceRef"}},
+    "created_at": {"type": "string", "format": "date-time"},
+    "updated_at": {"type": "string", "format": "date-time"},
+    "notes": {"type": "string"}
+  },
+  "$defs": {
+    "evidenceRef": {
+      "type": "object",
+      "required": ["case", "observation"],
+      "properties": {
+        "case": {"type": "string"},
+        "observation": {"type": "string"}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
